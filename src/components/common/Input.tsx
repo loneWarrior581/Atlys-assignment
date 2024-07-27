@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({
   rightIcon,
 }) => {
   return (
-    <div className=''>
+    <>
       <div className='text-sm text-gray-primary mb-2'>{headPlaceholder}</div>
       <div className='flex items-center p-2 rounded border border-gray-700 outline-1'>
         {leftIcon ?? leftIcon}
@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({
         />
         {rightIcon ?? rightIcon}
       </div>
-    </div>
+    </>
   )
 }
 
