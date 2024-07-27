@@ -6,7 +6,8 @@ import { useModal } from '../../hooks/useModal'
 import LoginForm from '../Auth/LoginForm'
 
 const CreatePost: React.FC = () => {
-  const { modal, openModal, closeModal } = useModal({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { modal, openModal } = useModal({
     children: <LoginForm />,
   })
 
