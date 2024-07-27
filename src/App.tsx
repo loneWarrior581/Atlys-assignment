@@ -1,6 +1,5 @@
-// src/App.tsx
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
@@ -12,6 +11,7 @@ const App: React.FC = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
         <Route path='/signup' element={<Register />} />
+        <Route path='*' element={<Navigate to='/home' replace />} />
       </Routes>
     </BrowserRouter>
   )
