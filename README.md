@@ -11,3 +11,6 @@ Reusable components made are as follows:
 - Modal
 - User Icon
 - Post Text Components
+
+🚀 The Application is deployed over
+[Live Link](https://blog-o-social.netlify.app/home)
