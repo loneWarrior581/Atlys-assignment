@@ -8,6 +8,11 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
+  validatorFns?: (() => void)[]
+  disabled?: boolean
+  infoText?: string
+  prefix?: string
+  suffix?: string
 }
 
 const Input: React.FC<InputProps> = ({
@@ -18,13 +23,19 @@ const Input: React.FC<InputProps> = ({
   onChange,
   leftIcon,
   rightIcon,
+  disabled = false,
+  infoText,
 }) => {
   return (
     <>
-      <div className='text-sm text-gray-primary mb-2'>{headPlaceholder}</div>
+      <div className='flex justify-between text-sm text-gray-primary mb-2'>
+        <span>{headPlaceholder}</span>
+        {infoText && <span>{infoText}</span>}
+      </div>
       <div className='flex items-center p-2 rounded border border-gray-700 outline-1'>
         {leftIcon ?? leftIcon}
         <input
+          disabled={disabled}
           type={type}
           placeholder={placeholder}
           value={value}

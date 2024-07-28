@@ -12,5 +12,9 @@ Reusable components made are as follows:
 - User Icon
 - Post Text Components
 
+Note: For now I have not created password input as a seperate component but we
+can make into seperate component to handle differenet cases of show and hide
+password.
+
 🚀 The Application is deployed over
 [Live Link](https://blog-o-social.netlify.app/home)

@@ -11,6 +11,7 @@ const LoginForm: React.FC = () => {
   const navigate = useNavigate()
   const handleLogin = () => {
     // Handle login logic
+    navigate('/home')
   }
 
   return (
@@ -39,9 +40,10 @@ const LoginForm: React.FC = () => {
             placeholder='Enter your password'
             value={password}
             onChange={e => setPassword(e.target.value)}
+            infoText='Forgot password ?'
           />
         </div>
-        <Button label='Login now' onClick={handleLogin} />
+        <Button label='Login now' onClick={handleLogin} disabled={false} />
         <div className='text-sm'>
           <span className='text-gray-secondary'>Not registered yet? </span>
           <span

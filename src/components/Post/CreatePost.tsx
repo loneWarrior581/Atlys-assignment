@@ -27,7 +27,7 @@ const CreatePost: React.FC = () => {
           />
         </PostText>
         <div className='flex justify-end'>
-          <Button label='Post' onClick={handlePost} />
+          <Button label='Post' onClick={handlePost} disabled={false} />
         </div>
       </Card>
     </>

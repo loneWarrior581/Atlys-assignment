@@ -56,7 +56,7 @@ const RegisterForm: React.FC = () => {
             onChange={e => setPassword(e.target.value)}
           />
         </div>
-        <Button label='Continue' onClick={handleRegister} />
+        <Button label='Continue' onClick={handleRegister} disabled={false} />
         <div className='text-sm'>
           <span className='text-gray-secondary'>Already have an account? </span>
           <span
